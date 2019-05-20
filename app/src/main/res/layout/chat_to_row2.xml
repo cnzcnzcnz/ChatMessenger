@@ -7,26 +7,23 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@mipmap/ic_launcher_round"
-            android:id="@+id/profilepic_chat_from_row"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="50dp" app:srcCompat="@mipmap/ic_launcher_round"
+            android:id="@+id/profilepic_chat_to_row"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:civ_border_width="2dp"
-            app:civ_border_color="@android:color/background_light"/>
+            app:civ_border_color="@android:color/background_light"
+            app:civ_border_width="2dp"/>
     <TextView
             android:text="this is message from me lorem ipsum dolor sit amet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_edittext_form"
             android:maxWidth="180dp"
-            android:id="@+id/textview_from_row"
-            app:layout_constraintStart_toEndOf="@+id/profilepic_chat_from_row"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintTop_toTopOf="@+id/profilepic_chat_from_row"
-            android:padding="16dp"/>
+            android:id="@+id/textview_to_row"
+            android:padding="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/profilepic_chat_to_row"
+            app:layout_constraintTop_toTopOf="@+id/profilepic_chat_to_row"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.47"
+            android:layout_marginRight="8dp" android:layout_marginEnd="8dp"/>
 </android.support.constraint.ConstraintLayout>
