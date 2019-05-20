@@ -16,6 +16,7 @@ import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
+import com.example.chatmessenger.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -165,7 +166,5 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-@Parcelize
-class User(val uid: String, val username: String, val profileImageUrl: String): Parcelable{
-    constructor() : this("","","")
-}
+//test commit
+
