@@ -25,7 +25,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 @SuppressLint("ByteOrderMark")
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() { //extends dari AppCompatActivity()
 
     private val READ_REQUEST_CODE = 5
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         setupPermissions()
 
-        val username = username_text_field.text.toString()
+        //val username = username_text_field.text.toString()
         val registerButton = findViewById(R.id.register_button) as Button
         val selectPhoto = findViewById(R.id.selectphoto_register_button) as Button
 
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener{
                 if(!it.isSuccessful) return@addOnCompleteListener
-
+//                val ref = FirebaseStorage.getInstance().getReference("/images/$filename")
                 Log.d("Main", "Succesfully created with uid: ${it.result?.user?.uid}")
                 uploadImagetoFirebaseStorage()
             }
@@ -151,8 +151,7 @@ class MainActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
 
-        val user = User(uid, username_text_field.text.toString(), profileImageUrl)
-
+        val user = User(uid, email_text_field.text.toString(), username_text_field.text.toString(), password_text_field.text.toString(), profileImageUrl)
         ref.setValue(user).addOnSuccessListener{
             Log.d("MainActivity", "We saved user to Firebase Database")
 

@@ -3,7 +3,6 @@ package com.example.chatmessenger
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.example.chatmessenger.model.User
 import com.google.firebase.database.DataSnapshot
@@ -77,7 +76,7 @@ class NewMessagesActivity : AppCompatActivity() {
 class UserItem(val user: User): Item<ViewHolder>(){
     override fun bind(viewHolder: ViewHolder, position: Int) {
         viewHolder.itemView.username_textview.text = user.username
-        Picasso.get().load(user.profileImageUrl).into(viewHolder.itemView.profilepicture)
+        Picasso.get().load(user.profileImageUrl).into(viewHolder.itemView.profilepicture_profile)
     }
 
     override fun getLayout(): Int {

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:id="@+id/newmessage_button"
-          android:title="New Message"
-          app:showAsAction="ifRoom"/>
+          android:title="New Message"/>
 
-    <item android:id="@+id/signout_button"
-          android:title="Sign Out"
-          app:showAsAction="ifRoom"/>
+    <item android:id="@+id/profile_button"
+          android:title="Profile"/>
+
+    <item android:id="@+id/settings_button"
+          android:title="Settings"/>
 
 </menu>
